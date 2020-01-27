@@ -1,0 +1,2 @@
+class UffmailController < ApplicationController
+end
