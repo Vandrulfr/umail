@@ -1,7 +1,5 @@
 DONE Adicionar campos no modelo de usuario, ou associar à outro modelo para manipulação dos dados
 DONE Permitir que usuario edite seus dados
-Criar pagina de seleção de UFFmail
-Redirecionar para pagina de seleção de uffmail caso seja o primeiro login
 Gerar UFFMail
-Salvar UFFMail
+DONE Salvar UFFMail
 CSS

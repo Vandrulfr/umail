@@ -1,19 +1,22 @@
 <h1>UFFMail</h1>
 
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
+  Logged in as <strong><%= current_user.email %></strong>.<br>
   <% if current_user.uffmail == nil %>
-<%= form_with model: @user, local: true do |f| %>
-<p>Selecione um UFFmail:<br>
-  <%= f.radio_button :uffmail, 'email1@email.com' %> email1@email.com <br>
-  <%= f.submit %>
+    <%= form_with model: @user, local: true do |f| %>
+      <p>Selecione um UFFmail:<br>
+        <%= f.radio_button :uffmail, 'email1@email.com' %> email1@email.com <br>
+        <%= f.submit %>
+      </p>
 
-</p>
-<%  end %>
-    <%end %>
+    <% end %>
+    <% else %>
+    UFFmail: <strong><%= current_user.uffmail %></strong><br>
+  <% end %>
 
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
