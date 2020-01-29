@@ -1,7 +1,8 @@
 DONE Adicionar campos no modelo de usuario, ou associar à outro modelo para manipulação dos dados
 DONE Permitir que usuario edite seus dados
-Gerar UFFMail
-Passar UFFMail para view (exibir uffmail)
+DONEGerar UFFMail
+DONEPassar UFFMail para view (exibir uffmail)
 DONE Salvar UFFMail
-Mais campos na tela de edição
+DONE Mais campos na tela de edição
 CSS
+Testes

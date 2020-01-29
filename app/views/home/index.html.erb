@@ -1,17 +1,37 @@
 <h1>UFFMail</h1>
 
 <% if user_signed_in? %>
+  Bem vindo, <%= current_user.nome %><br>
   Logged in as <strong><%= current_user.email %></strong>.<br>
   <% if current_user.uffmail == nil %>
+    <% umail = generate(current_user.nome, current_user.matricula) %>
     <%= form_with model: @user, local: true do |f| %>
       <p>Selecione um UFFmail:<br>
-        <%= f.radio_button :uffmail, 'email1@email.com' %> email1@email.com <br>
+        <%= f.radio_button :uffmail, umail[0] %>
+        <%= umail[0] %><br>
+
+        <%= f.radio_button :uffmail, umail[1] %>
+        <%= umail[1] %><br>
+
+        <%= f.radio_button :uffmail, umail[2] %>
+        <%= umail[2] %><br>
+
+
+        <%= f.radio_button :uffmail, umail[3] %>
+        <%= umail[3] %><br>
+
+
+        <%= f.radio_button :uffmail, umail[4] %>
+        <%= umail[4] %><br>
+
         <%= f.submit %>
       </p>
 
     <% end %>
     <% else %>
-    UFFmail: <strong><%= current_user.uffmail %></strong><br>
+    UFFmail:   <strong><%= current_user.uffmail %></strong><br>
+    Telefone:  <strong><%= current_user.telefone %></strong><br>
+    Matricula: <strong><%= current_user.matricula %></strong><br>
   <% end %>
 
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
