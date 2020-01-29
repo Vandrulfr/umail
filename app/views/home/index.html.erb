@@ -1,4 +1,4 @@
-<h1>UFFMail</h1>
+<div class="center"><h1>UFFMail</h1>
 
 <% if user_signed_in? %>
   Bem vindo, <%= current_user.nome %><br>
@@ -40,5 +40,6 @@
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+</div>
 <% end %>
 
