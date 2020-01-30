@@ -17,7 +17,20 @@
  */
 @import "bootstrap";
 
-
-.center{
+body{
   text-align: center;
+  background-color: #001a33;
+  color: #DCDCDC;
 }
+a:link{
+  color: #ff3300;
+}
+
+a:visited{
+  color: #cc3300;
+}
+
+.field{
+  padding: 5px;
+}
+

@@ -25,6 +25,7 @@ module MailGen
       options[3] = "#{nome.split[0]}"+"#{nome.split[1].chr}"+"#{nome.split.last.chr}"+"#{rand(500)}"+"@id.uff.br"
       lock = (User.where(uffmail: options[1]).present?)
     end
+
     options[4] = "#{nome.split[0]}"+"#{nome.split.last}"+"#{matricula}"+"@id.uff.br"
 
     options
