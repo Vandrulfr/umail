@@ -8,6 +8,7 @@ SimpleCov.start 'rails' do
   minimum_coverage 85
   add_filter '/mailers/'
   add_filter '/channels/'
+  add_filter '/app/jobs/'
 end
 require File.expand_path('../config/environment', __dir__)
 
