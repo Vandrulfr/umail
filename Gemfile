@@ -63,3 +63,4 @@ gem 'bootstrap'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'rubocop'
+gem 'simplecov', require: false, group: :test
