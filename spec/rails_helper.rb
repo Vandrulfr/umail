@@ -1,10 +1,7 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'spec_helper'
-require 'simplecov'
-require 'factory_bot'
-require 'support/factory_bot'
-require 'support/db_cleaner'
 ENV['RAILS_ENV'] ||= 'test'
+# This file is copied to spec/ when you run 'rails generate rspec:install'
+require 'simplecov'
+
 SimpleCov.start 'rails' do
   minimum_coverage 85
   add_filter '/mailers/'
@@ -15,8 +12,12 @@ require File.expand_path('../config/environment', __dir__)
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-require 'rspec/rails'
 
+require 'spec_helper'
+require 'rspec/rails'
+require 'factory_bot'
+require 'support/factory_bot'
+require 'support/db_cleaner'
 Dir[Rails.root.join('spec/support/*.rb')].each { |f| require f  }
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -50,7 +51,6 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.use_transactional_fixtures = true
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
