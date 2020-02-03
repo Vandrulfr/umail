@@ -20,10 +20,10 @@ module MailGen
     options[2] = "#{nome.split[0]}"+"#{matricula}"+"@id.uff.br"
 
     options[3] = "#{nome.split[0]}"+"#{nome.split[1].chr}"+"#{nome.split.last.chr}"+"@id.uff.br"
-    lock = (User.where(uffmail: options[1]).present?)
+    lock = (User.where(uffmail: options[3]).present?)
     while lock
       options[3] = "#{nome.split[0]}"+"#{nome.split[1].chr}"+"#{nome.split.last.chr}"+"#{rand(500)}"+"@id.uff.br"
-      lock = (User.where(uffmail: options[1]).present?)
+      lock = (User.where(uffmail: options[3]).present?)
     end
 
     options[4] = "#{nome.split[0]}"+"#{nome.split.last}"+"#{matricula}"+"@id.uff.br"

@@ -3,6 +3,7 @@ require 'spec_helper'
 require 'simplecov'
 require 'factory_bot'
 require 'support/factory_bot'
+require 'support/db_cleaner'
 ENV['RAILS_ENV'] ||= 'test'
 SimpleCov.start 'rails' do
   minimum_coverage 85
