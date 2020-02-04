@@ -15,6 +15,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   attr_accessor :current_password
+  validates_presence_of :matricula
   validates_uniqueness_of :matricula
   validates_with ValidaNome
 end

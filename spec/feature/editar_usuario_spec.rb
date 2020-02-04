@@ -34,5 +34,6 @@ RSpec.feature "Editar usuario", :type => :feature do
     page.accept_confirm do
       click_button 'Cancel my account'
     end
+    expect(page).to have_text("Bye! Your account has been successfully cancelled. We hope to see you again soon.")
   end
 end
